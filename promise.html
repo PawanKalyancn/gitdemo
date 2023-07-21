@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    function prom(complete) {
+
+        //      return new Promise(function(resolve, reject) {
+        //
+        //              if (complete) {
+        //
+        //
+
+        //
+        //                resolve("successful")
+        //          } else {
+        //            reject("unsuccessful")
+        //     }
+
+        //  });
+        //   }
+
+
+        //  let onFulfilledment = (result) => {
+        //  console.log("fullfilled : " + result);
+        //  }
+        //}
+        //
+        //  let onRejection = (result) => {
+        //    console.log("onRejection :" + result);
+        //}
+
+
+        //prom(false).then(onFulfilledment).catch(onRejection);
+        //
+    </script>
+
+    <script>
+        /*function prom(complete) {
+
+                            return new Promise(function(resolve, reject) {
+
+                                if (complete) {
+                                    resolve("we have given the money")
+                                } else {
+                                    reject("not given the money")
+                                }
+
+                            });
+                        }
+
+
+                        let onFulfilledment = (result) => {
+                            console.log("fullfilled : " + result);
+                        }
+
+                        let onRejection = (result) => {
+                            console.log("onRejection :" + result);
+                        }
+
+
+                        prom(true).then(onFulfilledment).catch(onRejection);
+                    */
+    </script>
+
+    <script>
+        function prom(complete) {
+
+            return new Promise(function(resolve, reject) {
+
+                console.log("pending")
+                setTimeout(() => {
+
+                    if (complete) {
+                        resolve("we have given the money")
+                    } else {
+                        reject("not given the money")
+                    }
+
+
+                }, 5000)
+
+
+            });
+        }
+
+
+        let onFulfilledment = (a) => {
+            console.log("fullfilled : " + a);
+        }
+
+        let onRejection = (res) => {
+            console.log("onRejection :" + res);
+        }
+
+
+
+        var complete = true;
+
+        prom(complete).then(onFulfilledment).catch(onRejection);
+    </script>
+</body>
+
+</html>
